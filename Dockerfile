@@ -19,6 +19,8 @@ RUN chown -R express-streamer:express-streamer .
 
 # You can remove this install step if you build with `--bundle` option.
 # The bundled output will include external dependencies.
+
+# install packages into express-stream folder and ignore dev packages
 RUN npm --prefix express-streamer --omit=dev -f install
 
 CMD [ "node", "express-streamer" ]
